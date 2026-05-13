@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aminoto Grid Builder PRO</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Bodoni+Moda:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
 /* ===== THEME ===== */
@@ -165,29 +167,26 @@ input:checked+.tgl-s:before{transform:translateX(13px);}
 .catbar span{font-family:'Cormorant Garamond',serif;font-size:6px;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--su,#9ab84a);opacity:.75;}
 .botbar{position:absolute;bottom:5px;left:0;right:0;display:flex;justify-content:space-around;z-index:10;padding:0 8px;}
 .botbar span{font-family:'Cormorant Garamond',serif;font-size:6px;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--su,#9ab84a);opacity:.75;}
-.ci{position:absolute;inset:0;padding:16px 12px 14px;display:flex;flex-direction:column;z-index:5;}
-.ci.top{justify-content:flex-start;padding-top:20px;}
-.ci.center{justify-content:center;}
-.ci.bottom{justify-content:flex-end;padding-bottom:18px;}
+.ci{position:absolute;inset:0;padding:16px 12px 14px;display:flex;flex-direction:column;z-index:5;justify-content:var(--pos-jc,flex-end);align-items:var(--pos-ai,flex-start);text-align:var(--pos-ta,left);}
 /* Card text elements - use CSS vars */
-.t1{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*24px);color:var(--hl,#f0e5c0);line-height:.83;letter-spacing:-1px;}
-.t2{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*24px);color:var(--ac-c,#d4c87a);line-height:.83;margin-top:2px;}
-.t3{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*20px);color:var(--hl,#f0e5c0);line-height:.85;}
+.t1{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*24px);color:var(--hl,#f0e5c0);line-height:var(--clh,.85);letter-spacing:-1px;}
+.t2{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*24px);color:var(--ac-c,#d4c87a);line-height:var(--clh,.85);margin-top:var(--ceg,2px);}
+.t3{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*20px);color:var(--hl,#f0e5c0);line-height:var(--clh,.85);margin-top:var(--ceg,2px);}
 .eyebrow{font-family:'Cormorant Garamond',serif;font-size:6.5px;color:var(--su,#c8d88a);letter-spacing:2px;text-transform:uppercase;font-style:italic;margin-bottom:2px;opacity:.85;}
-.sub{font-family:'Cormorant Garamond',serif;font-size:7px;color:var(--su,#9ab84a);line-height:1.4;font-style:italic;margin-top:5px;opacity:.9;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:7px;color:var(--su,#9ab84a);line-height:1.4;font-style:italic;margin-top:var(--ceg,5px);opacity:.9;}
 .tag{font-family:'Cormorant Garamond',serif;font-size:6.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;color:var(--su,#a8be6a);opacity:.75;}
-.badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:7px;padding:2px 7px;border-radius:20px;margin-top:6px;font-weight:600;background:var(--hl,#f0e5c0);color:var(--cbg,#3d5a1e);}
+.badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:7px;padding:2px 7px;border-radius:20px;margin-top:var(--ceg,6px);font-weight:600;background:var(--hl,#f0e5c0);color:var(--cbg,#3d5a1e);}
 .pill{border:1px solid var(--ac-c,#c8d88a);color:var(--ac-c,#c8d88a);font-family:'Cormorant Garamond',serif;font-size:6.5px;padding:1.5px 6px;border-radius:20px;display:inline-block;margin-bottom:3px;}
-.addr-box{background:rgba(0,0,0,.15);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:4px 5px;margin-top:5px;}
+.addr-box{background:rgba(0,0,0,.15);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:4px 5px;margin-top:var(--ceg,5px);}
 .addr{font-family:'Cormorant Garamond',serif;font-size:6.5px;color:var(--su,#c8d88a);line-height:1.5;}
 .hours{font-family:'Cormorant Garamond',serif;font-size:6px;color:var(--ac-c,#d4c87a);font-style:italic;margin-top:2px;}
-.addr-tag{font-family:'Cormorant Garamond',serif;font-size:6.5px;padding:3px 5px;display:block;margin-top:5px;border-radius:2px;line-height:1.5;background:rgba(0,0,0,.3);color:var(--ac-c,#d4c87a);}
-.desc{font-family:'Cormorant Garamond',serif;font-size:7px;line-height:1.5;margin-top:5px;color:var(--su,#8aaa5a);opacity:.9;}
-.tagline{font-family:'Cormorant Garamond',serif;font-size:7px;padding:2px 7px;border-radius:3px;margin-top:6px;display:inline-block;font-weight:600;background:var(--hl,#f0e5c0);color:var(--cbg,#2a3018);}
+.addr-tag{font-family:'Cormorant Garamond',serif;font-size:6.5px;padding:3px 5px;display:block;margin-top:var(--ceg,5px);border-radius:2px;line-height:1.5;background:rgba(0,0,0,.3);color:var(--ac-c,#d4c87a);}
+.desc{font-family:'Cormorant Garamond',serif;font-size:7px;line-height:1.5;margin-top:var(--ceg,5px);color:var(--su,#8aaa5a);opacity:.9;}
+.tagline{font-family:'Cormorant Garamond',serif;font-size:7px;padding:2px 7px;border-radius:3px;margin-top:var(--ceg,6px);display:inline-block;font-weight:600;background:var(--hl,#f0e5c0);color:var(--cbg,#2a3018);}
 .deco-n{position:absolute;right:-4px;top:0;font-family:'Abril Fatface',serif;font-size:70px;opacity:.1;line-height:1;z-index:2;color:var(--hl,#fff);}
 .deco-l{position:absolute;bottom:-10px;right:-4px;font-family:'Abril Fatface',serif;font-size:80px;opacity:.12;line-height:1;z-index:2;color:var(--hl,#fff);}
-.uline{font-family:'DM Serif Display',serif;font-style:italic;font-size:8px;text-decoration:underline;text-underline-offset:2px;margin-top:3px;color:var(--su,#7a8c3a);}
-.bot-box{border-radius:3px;padding:4px 6px;margin-top:4px;background:rgba(0,0,0,.35);}
+.uline{font-family:'DM Serif Display',serif;font-style:italic;font-size:8px;text-decoration:underline;text-underline-offset:2px;margin-top:var(--ceg,3px);color:var(--su,#7a8c3a);}
+.bot-box{border-radius:3px;padding:4px 6px;margin-top:var(--ceg,4px);background:rgba(0,0,0,.35);}
 .hl{font-family:'Cormorant Garamond',serif;font-size:6px;font-style:italic;margin-top:2px;color:var(--su,#a8be6a);}
 .star{position:absolute;top:7px;right:9px;font-size:13px;opacity:.6;z-index:6;color:var(--hl,#fff);}
 .logo-overlay{position:absolute;z-index:15;object-fit:contain;opacity:.9;}
@@ -268,13 +267,21 @@ input[type=file]{display:none;}
       <div class="sec">FONT HEADLINE</div>
       <div class="fgrid" id="fontGrid"></div>
       <div class="sec" style="margin-top:10px">UKURAN FONT</div>
-      <div class="srow"><input type="range" min="60" max="150" value="100" id="fsSlider" oninput="applyFS(this.value)"><span class="sv" id="fsVal">100%</span></div>
+      <div class="srow"><input type="range" min="30" max="500" value="100" id="fsSlider" oninput="applyFS(this.value)"><span class="sv" id="fsVal">100%</span></div>
+      <div class="sec" style="margin-top:10px">JARAK BARIS (LINE-HEIGHT)</div>
+      <div class="srow"><input type="range" min="0.6" max="2.5" step="0.05" value="0.85" id="lhSlider" oninput="setLH(this.value)"><span class="sv" id="lhVal">0.85</span></div>
+      <div class="sec" style="margin-top:10px">JARAK ANTAR ELEMEN</div>
+      <div class="srow"><input type="range" min="0" max="40" value="5" id="egSlider" oninput="setEG(this.value)"><span class="sv" id="egVal">5px</span></div>
       <div class="sec" style="margin-top:10px">WARNA TEKS</div>
       <div class="fg"><label class="fl">Headline</label><div class="crow" id="cHL"></div></div>
       <div class="fg"><label class="fl">Aksen / Baris 2</label><div class="crow" id="cAC"></div></div>
       <div class="fg"><label class="fl">Subtitle / Detail</label><div class="crow" id="cSU"></div></div>
       <div class="sec" style="margin-top:10px">BACKGROUND CARD</div>
       <div class="crow" id="cBG"></div>
+      <div class="sec" style="margin-top:10px">JARAK BARIS (LINE HEIGHT)</div>
+      <div class="srow"><input type="range" min="0.5" max="2.5" step="0.05" value="0.85" id="lhSlider" oninput="applyLH(this.value)"><span class="sv" id="lhVal">0.85</span></div>
+      <div class="sec" style="margin-top:10px">JARAK ANTAR ELEMEN</div>
+      <div class="srow"><input type="range" min="0" max="40" value="5" id="egSlider" oninput="applyEG(this.value)"><span class="sv" id="egVal">5px</span></div>
       <div class="sec" style="margin-top:10px">POSISI KONTEN</div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <div class="pgrid" id="posGrid"></div>
@@ -287,7 +294,7 @@ input[type=file]{display:none;}
     <!-- Foto panel -->
     <div class="spanel" id="p-foto">
       <div class="sec">FOTO BACKGROUND</div>
-      <div class="iz" id="imgZone" onclick="trigUpload('img')" ondragover="event.preventDefault()" ondrop="dropImg(event)">
+      <div class="iz" id="imgZone" onclick="trigUpload('img')" ondragover="event.preventDefault();this.style.borderColor='var(--gd)'" ondragleave="this.style.borderColor=''" ondrop="this.style.borderColor='';dropImg(event)">
         <div class="iz-empty" id="imgEmpty"><div class="iz-ico">🖼</div><div class="iz-lbl">Klik atau drag foto ke sini</div><div class="iz-hint">Jadi background card dengan overlay warna brand</div></div>
         <div id="imgFull" style="display:none"><img class="iz-thumb" id="imgThumb"><div class="iz-btns"><button class="iz-btn" onclick="event.stopPropagation();trigUpload('img')">↑ Ganti</button><button class="iz-btn del" onclick="event.stopPropagation();clearImg()">✕ Hapus</button></div></div>
       </div>
@@ -301,12 +308,16 @@ input[type=file]{display:none;}
     </div>
     <!-- Brand panel -->
     <div class="spanel" id="p-brand">
-      <div class="sec">BRAND KIT</div>
-      <div class="fg"><label class="fl">Nama Brand</label><input class="fi" type="text" id="bkName" value="Aminoto" oninput="updBK()"></div>
-      <div class="fg"><label class="fl">Tagline Card</label><input class="fi" type="text" id="bkTag" value="Pecel Lele" oninput="updBK()"></div>
+      <div class="sec">BRAND IDENTITY</div>
+      <div class="fg"><label class="fl">Nama Brand (untuk fallback)</label><input class="fi" type="text" id="bkName" value="Aminoto" oninput="updBK()"></div>
+      <div class="fg"><label class="fl">Tagline Card (atas/bawah tiap card)</label><input class="fi" type="text" id="bkTag" value="Pecel Lele" oninput="updBK()"></div>
       <div style="display:flex;gap:5px;margin-top:4px">
-        <button class="btn" onclick="applyBKAll()" style="flex:1;font-size:10px">↻ Apply Semua</button>
+        <button class="btn" onclick="applyBKAll()" style="flex:1;font-size:10px">↻ Apply Tagline ke Semua Card</button>
       </div>
+      <div class="sec" style="margin-top:12px">BRAND BAR ATAS</div>
+      <div id="barTopEdit"></div>
+      <div class="sec" style="margin-top:12px">BRAND BAR BAWAH</div>
+      <div id="barBotEdit"></div>
       <div class="sec" style="margin-top:10px">LOGO / STIKER</div>
       <div class="iz" onclick="trigUpload('logo')">
         <div class="iz-empty" id="logoEmpty"><div class="iz-ico">🏷</div><div class="iz-lbl">Upload Logo PNG</div><div class="iz-hint">Transparan, muncul di sudut card</div></div>
@@ -350,11 +361,11 @@ input[type=file]{display:none;}
     </div>
     <div class="cwrap">
       <div id="GP">
-        <div class="gp-brand"><span class="gp-bn" id="gpL">Pecel Lele</span><span class="gp-logo" id="gpN">aminoto.</span><span class="gp-bn" id="gpR">Pecel Lele</span></div>
+        <div class="gp-brand" id="gpBarTop"></div>
         <div class="grow" id="row1"></div>
         <div class="grow" id="row2"></div>
         <div class="grow" id="row3" style="display:none"></div>
-        <div class="gp-brand"><span class="gp-bn">Pecel Lele</span><span class="gp-logo" id="gpN2">aminoto.</span><span class="gp-bn">Pecel Lele</span></div>
+        <div class="gp-brand" id="gpBarBot"></div>
       </div>
     </div>
     <div class="bbar">
@@ -466,10 +477,12 @@ function mkCard(i){
   return{
     d:defs[i]||{brand:'Pecel Lele',t1:'Card '+(i+1),t2:''},
     img:null,ov:0.72,fx:50,fy:50,filt:'none',
-    font:FONTS[0].v,fs:100,
+    font:FONTS[0].v,fs:100,lh:0.85,eg:5,
     hl:'',ac:'',su:'',bg:'',
-    pos:'bottom',outline:false,shadow:false,
+    pos:'bc',
+    outline:false,shadow:false,
     logo:null,lpos:'br',lsz:20,
+    template:i,
     notes:'',caption:'',sd:'',st:'09:00',
     varB:null,useB:false,
   };
@@ -483,7 +496,10 @@ let S={
   ord:false,client:false,theme:'dark',lang:'id',
   zoom:80,
   eFmt:'png',eRes:1080,
-  bk:{name:'Aminoto',tag:'Pecel Lele',logo:null,lpos:'br',lsz:20},
+  bk:{name:'Aminoto',tag:'Pecel Lele',logo:null,lpos:'br',lsz:20,
+    barTop:[{icon:'fa-instagram',text:'@aminoto.cirebon'},{icon:'',text:'aminoto.'},{icon:'fa-tiktok',text:'@aminoto'}],
+    barBot:[{icon:'fa-whatsapp',text:'0812-3456-7890'},{icon:'',text:'Sambal Dadak'},{icon:'fa-location-dot',text:'Cirebon'}]
+  },
   themes:[...THEMES],
   calM:new Date().getMonth(),calY:new Date().getFullYear(),
   undos:[],redos:[],
@@ -513,25 +529,38 @@ function redo(){
 // ===================================================
 // CSS VARS — applied directly to card DOM element
 // ===================================================
-function applyVars(idx){
-  const el=document.getElementById('c'+idx);
-  if(!el)return;
-  const c=S.cards[idx];
-  // Background
+const POS_MAP={tl:['flex-start','flex-start','left'],tc:['flex-start','center','center'],tr:['flex-start','flex-end','right'],ml:['center','flex-start','left'],mc:['center','center','center'],mr:['center','flex-end','right'],bl:['flex-end','flex-start','left'],bc:['flex-end','center','center'],br:['flex-end','flex-end','right']};
+function applyVarsToEl(el,c,idx){
+  if(!el||!c)return;
   el.style.setProperty('--cbg', c.bg||CBG[idx]);
-  // Font
   el.style.setProperty('--cf', c.font||FONTS[0].v);
-  // Font scale
   el.style.setProperty('--cfs', (c.fs||100)/100);
-  // Colors
   el.style.setProperty('--hl', c.hl||CTX[idx]);
   el.style.setProperty('--ac-c', c.ac||CAC[idx]);
   el.style.setProperty('--su', c.su||CSU[idx]);
-  // Text FX on .t1 .t2 .t3
+  el.style.setProperty('--clh', c.lh||0.85);
+  el.style.setProperty('--ceg', (c.eg||5)+'px');
+  // Position - migrate old values (top/center/bottom) to new 9-way
+  let pos=c.pos||'bc';
+  if(pos==='top')pos='tc';else if(pos==='center')pos='mc';else if(pos==='bottom')pos='bc';
+  const p=POS_MAP[pos]||POS_MAP.bc;
+  el.style.setProperty('--pos-jc',p[0]);
+  el.style.setProperty('--pos-ai',p[1]);
+  el.style.setProperty('--pos-ta',p[2]);
+  // Line-height & element gap
+  el.style.setProperty('--clh', c.lh!==undefined?c.lh:0.85);
+  el.style.setProperty('--ceg', (c.eg!==undefined?c.eg:5)+'px');
+  // Text FX
   el.querySelectorAll('.t1,.t2,.t3').forEach(t=>{
     t.style.webkitTextStroke=c.outline?'1px rgba(0,0,0,.55)':'';
     t.style.textShadow=c.shadow?'2px 2px 5px rgba(0,0,0,.65)':'';
   });
+}
+function applyVars(idx){
+  const el=document.getElementById('c'+idx);
+  if(!el)return;
+  const c=S.cards[idx];
+  applyVarsToEl(el,c,idx);
 }
 // ===================================================
 // CARD RENDER
@@ -544,8 +573,8 @@ function bgHtml(c,i){
 }
 function logoHtml(c){
   const src=c.logo||S.bk.logo;if(!src)return'';
-  const pos=c.lpos||S.bk.lpos||'br';
-  const sz=c.lsz||S.bk.lsz||20;
+  const pos=S.bk.lpos||'br';
+  const sz=S.bk.lsz||20;
   const pm={tl:'top:8px;left:8px',tr:'top:8px;right:8px',bl:'bottom:18px;left:8px',br:'bottom:18px;right:8px'};
   return`<img class="logo-overlay" src="${src}" style="${pm[pos]};width:${sz}%">`;
 }
@@ -555,7 +584,8 @@ function ordBadge(i){
 }
 function cardInner(idx){
   const c=S.cards[idx];const d=c.d;
-  switch(idx){
+  const tpl=c.template!==undefined?c.template:idx;
+  switch(tpl){
     case 0:return`<div class="t1">${nl(d.t1)}</div><div class="t2">${nl(d.t2)}</div><div class="sub">${nl(d.sub)}</div><span class="badge">${d.badge||''}</span>`;
     case 1:return`<div class="eyebrow">${d.eyebrow||''}</div><div class="t1">${nl(d.t1)}</div><div class="t2">${nl(d.t2)}</div><div class="t3">${nl(d.t3)}</div><span class="tagline">${d.tagline||''}</span>`;
     case 2:return`<div class="deco-n">${d.decoN||''}</div><span class="star">✦</span><div class="tag">${d.tag||''}</div><div class="t1">${nl(d.t1)}</div><div class="t2">${nl(d.t2)}</div><div class="desc">${nl(d.desc)}</div>`;
@@ -570,14 +600,14 @@ function cardInner(idx){
 }
 function renderCard(idx){
   const c=S.cards[idx];
-  const sel=idx===S.sel?' sel':'';
-  const pos=c.pos==='top'?'top':c.pos==='center'?'center':'bottom';
-  return`<div class="card" id="c${idx}${sel}" onclick="selCard(${idx})" ondragover="event.preventDefault();this.style.outline='2px dashed var(--gd)'" ondragleave="this.style.outline=''" ondrop="dropImgTo(event,${idx})">
+  const isSel=idx===S.sel?' sel':'';
+  const br=c.d.brand||'Pecel Lele';
+  return`<div class="card${isSel}" id="c${idx}" onclick="selCard(${idx})" ondragover="event.preventDefault();this.style.outline='2px dashed var(--gd)'" ondragleave="this.style.outline=''" ondrop="dropImgTo(event,${idx})">
     ${bgHtml(c,idx)}${logoHtml(c)}${ordBadge(idx)}
-    <div class="catbar"><span>${c.d.brand||'Pecel Lele'}</span><span>${c.d.brand||'Pecel Lele'}</span><span>${c.d.brand||'Pecel Lele'}</span></div>
-    <div class="ci ${pos}">${cardInner(idx)}</div>
+    <div class="catbar"><span>${br}</span><span>${br}</span><span>${br}</span></div>
+    <div class="ci">${cardInner(idx)}</div>
     ${c.useB?`<div style="position:absolute;top:3px;right:3px;background:rgba(0,0,0,.5);color:var(--gd);font-size:7px;border-radius:2px;padding:0 3px;z-index:20">B</div>`:''}
-    <div class="botbar"><span>${c.d.brand||'Pecel Lele'}</span><span>${c.d.brand||'Pecel Lele'}</span><span>${c.d.brand||'Pecel Lele'}</span></div>
+    <div class="botbar"><span>${br}</span><span>${br}</span><span>${br}</span></div>
   </div>`;
 }
 // ===================================================
@@ -597,12 +627,24 @@ function renderGrid(){
   for(let i=0;i<S.total;i++)applyVars(i);
   // Order overlay
   document.getElementById('GP').classList.toggle('show-ord',S.ord);
-  // Brand names
-  const nm=S.bk.name+'.';
-  document.getElementById('gpN').textContent=nm;
-  document.getElementById('gpN2').textContent=nm;
-  document.getElementById('gpL').textContent=S.bk.tag;
-  document.getElementById('gpR').textContent=S.bk.tag;
+  // Render brand bars top & bottom
+  renderBrandBar('gpBarTop', S.bk.barTop);
+  renderBrandBar('gpBarBot', S.bk.barBot);
+}
+function renderBrandBar(elId, bar){
+  const el=document.getElementById(elId);
+  if(!el||!bar)return;
+  el.innerHTML=bar.map((seg,i)=>{
+    const isMid=i===1;
+    const cls=isMid?'gp-logo':'gp-bn';
+    let iconHtml='';
+    if(seg.icon){
+      const meta=ICONS.find(x=>x.v===seg.icon);
+      const fam=meta?meta.f:'brands';
+      iconHtml=`<i class="fa-${fam} ${seg.icon}" style="margin-right:5px"></i>`;
+    }
+    return`<span class="${cls}">${iconHtml}${seg.text||''}</span>`;
+  }).join('');
 }
 function renderPicker(){
   const ord=S.total===9?[9,8,7,6,5,4,3,2,1]:[6,5,4,3,2,1];
@@ -616,6 +658,7 @@ function renderPicker(){
 }
 function renderEditForm(){
   const c=S.cards[S.sel];const d=c.d;
+  const tpl=c.template!==undefined?c.template:S.sel;
   const FIELDS=[
     [['brand','Label Brand','i'],['t1','Teks Besar 1','i'],['t2','Teks Besar 2 (aksen)','i'],['sub','Subtitle','ta'],['badge','Badge Text','i']],
     [['brand','Label Brand','i'],['eyebrow','Eyebrow Text','i'],['t1','Teks Besar 1','i'],['t2','Teks Besar 2 (aksen)','i'],['t3','Teks Besar 3','i'],['tagline','Tagline Badge','i']],
@@ -627,8 +670,13 @@ function renderEditForm(){
     [['brand','Label Brand','i'],['eyebrow','Eyebrow/Quote Label','i'],['t1','Teks Quote 1','i'],['t2','Teks Quote 2','i'],['sub','Sumber/Credit','i']],
     [['brand','Label Brand','i'],['t1','Headline Promo','i'],['t2','Sub-headline','i'],['sub','Detail Promo','ta'],['cta','CTA Button Text','i']],
   ];
-  const fields=FIELDS[S.sel]||FIELDS[0];
-  let html=`<div class="sec">Card ${S.sel+1} — ${CNAMES[S.sel]}</div>`;
+  const fields=FIELDS[tpl]||FIELDS[0];
+  // Template selector dropdown at top
+  let html=`<div class="sec">Card ${S.sel+1}</div>
+    <div class="fg"><label class="fl">Template Layout</label>
+    <select class="fi" onchange="setTemplate(this.value)">${CNAMES.map((n,ti)=>`<option value="${ti}" ${tpl===ti?'selected':''}>${ti+1}. ${n}</option>`).join('')}</select>
+    </div>
+    <div class="sec" style="margin-top:8px">EDIT KONTEN</div>`;
   fields.forEach(([k,l,t])=>{
     const v=(d[k]||'').replace(/<br>/g,'\n');
     html+=`<div class="fg"><label class="fl">${l}</label>`;
@@ -640,13 +688,19 @@ function renderEditForm(){
 }
 function renderDesignPanel(){
   const c=S.cards[S.sel];
-  // Font grid
-  document.getElementById('fontGrid').innerHTML=FONTS.map(f=>
-    `<div class="fopt${c.font===f.v?' on':''}" style="font-family:${f.v}" onclick="setFont('${f.v}')">${f.n}</div>`
+  // Font grid - use index to avoid quote conflicts
+  document.getElementById('fontGrid').innerHTML=FONTS.map((f,fi)=>
+    `<div class="fopt${c.font===f.v?' on':''}" style="font-family:${f.v}" onclick="setFontIdx(${fi})">${f.n}</div>`
   ).join('');
   // Font size
   document.getElementById('fsSlider').value=c.fs||100;
   document.getElementById('fsVal').textContent=(c.fs||100)+'%';
+  // Line-height
+  document.getElementById('lhSlider').value=c.lh||0.85;
+  document.getElementById('lhVal').textContent=(c.lh||0.85).toFixed(2);
+  // Element gap
+  document.getElementById('egSlider').value=c.eg||5;
+  document.getElementById('egVal').textContent=(c.eg||5)+'px';
   // Color pickers
   const mkPal=(id,cur,fn)=>{
     document.getElementById(id).innerHTML=PALETTES.map(col=>
@@ -662,11 +716,20 @@ function renderDesignPanel(){
     ?`<div class="csw${c.bg===col?' on':''}" style="background:${col}" onclick="setBG('${col}')" title="${col}"></div>`
     :`<div class="csw${!c.bg?' on':''}" style="background:var(--pn);border-style:dashed;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--tx3)" onclick="setBG('')" title="Default">✕</div>`
   ).join('')+`<input type="color" value="${c.bg||CBG[S.sel]}" onchange="setBG(this.value)" title="Custom">`;
-  // Position grid
-  const POS=[['↖','top'],['↑','top'],['↗','top'],['←','center'],['✛','center'],['→','center'],['↙','bottom'],['↓','bottom'],['↘','bottom']];
-  document.getElementById('posGrid').innerHTML=POS.map(([ic,pv])=>
-    `<div class="pbtn${c.pos===pv?' on':''}" onclick="setPos('${pv}')">${ic}</div>`
+  // 9-direction position picker (3x3 grid)
+  const POS_GRID=[['↖','tl'],['↑','tc'],['↗','tr'],['←','ml'],['✛','mc'],['→','mr'],['↙','bl'],['↓','bc'],['↘','br']];
+  // Migrate old values for display
+  let curPos=c.pos||'bc';
+  if(curPos==='top')curPos='tc';else if(curPos==='center')curPos='mc';else if(curPos==='bottom')curPos='bc';
+  document.getElementById('posGrid').style.width='90px';
+  document.getElementById('posGrid').style.gridTemplateColumns='repeat(3,1fr)';
+  document.getElementById('posGrid').innerHTML=POS_GRID.map(([ic,pv])=>
+    `<div class="pbtn${curPos===pv?' on':''}" onclick="setPos9('${pv}')" title="${pv}">${ic}</div>`
   ).join('');
+  // Line-height slider
+  const lhSl=document.getElementById('lhSlider');if(lhSl){lhSl.value=c.lh!==undefined?c.lh:0.85;document.getElementById('lhVal').textContent=(c.lh!==undefined?c.lh:0.85).toFixed(2);}
+  // Element gap slider
+  const egSl=document.getElementById('egSlider');if(egSl){egSl.value=c.eg!==undefined?c.eg:5;document.getElementById('egVal').textContent=(c.eg!==undefined?c.eg:5)+'px';}
   // FX
   document.getElementById('tOut').checked=!!c.outline;
   document.getElementById('tSha').checked=!!c.shadow;
@@ -691,10 +754,56 @@ function renderPhotoPanel(){
     `<div class="filt${c.filt===f.id?' on':''}" onclick="setFilt('${f.id}')">${f.l}</div>`
   ).join('');
 }
+const ICONS=[
+  {v:'',l:'(none)',f:''},
+  {v:'fa-instagram',l:'Instagram',f:'brands'},
+  {v:'fa-tiktok',l:'TikTok',f:'brands'},
+  {v:'fa-whatsapp',l:'WhatsApp',f:'brands'},
+  {v:'fa-facebook',l:'Facebook',f:'brands'},
+  {v:'fa-youtube',l:'YouTube',f:'brands'},
+  {v:'fa-x-twitter',l:'X (Twitter)',f:'brands'},
+  {v:'fa-telegram',l:'Telegram',f:'brands'},
+  {v:'fa-pinterest',l:'Pinterest',f:'brands'},
+  {v:'fa-linkedin',l:'LinkedIn',f:'brands'},
+  {v:'fa-snapchat',l:'Snapchat',f:'brands'},
+  {v:'fa-phone',l:'☎ Phone',f:'solid'},
+  {v:'fa-envelope',l:'✉ Email',f:'solid'},
+  {v:'fa-location-dot',l:'📍 Location',f:'solid'},
+  {v:'fa-globe',l:'🌐 Web',f:'solid'},
+  {v:'fa-clock',l:'🕐 Clock',f:'solid'},
+  {v:'fa-heart',l:'❤ Heart',f:'solid'},
+  {v:'fa-star',l:'★ Star',f:'solid'},
+  {v:'fa-utensils',l:'🍴 Food',f:'solid'},
+  {v:'fa-shop',l:'🏪 Shop',f:'solid'},
+];
+function iconOptions(selected){
+  return ICONS.map(ic=>`<option value="${ic.v}" ${ic.v===selected?'selected':''}>${ic.l}</option>`).join('');
+}
+function renderBarEditor(containerId, barKey){
+  const bar=S.bk[barKey];
+  const labels=['Kiri','Tengah','Kanan'];
+  let html='';
+  bar.forEach((seg,i)=>{
+    html+=`<div class="fg" style="background:var(--pn);padding:6px;border-radius:4px;border:1px solid var(--br);margin-bottom:5px">
+      <div style="font-size:9px;font-weight:700;color:var(--gd);margin-bottom:4px">${labels[i]}</div>
+      <select class="fi" style="font-size:10px;padding:4px 6px;margin-bottom:4px" onchange="updBar('${barKey}',${i},'icon',this.value)">${iconOptions(seg.icon)}</select>
+      <input class="fi" style="font-size:10px;padding:4px 6px" type="text" value="${(seg.text||'').replace(/"/g,'&quot;')}" placeholder="Teks/handle..." oninput="updBar('${barKey}',${i},'text',this.value)">
+    </div>`;
+  });
+  document.getElementById(containerId).innerHTML=html;
+}
+function updBar(barKey,segIdx,field,value){
+  S.bk[barKey][segIdx][field]=value;
+  renderGrid();
+}
 function renderBrandPanel(){
   const bk=S.bk;
   document.getElementById('bkName').value=bk.name;
   document.getElementById('bkTag').value=bk.tag;
+  // Brand bar editors
+  renderBarEditor('barTopEdit','barTop');
+  renderBarEditor('barBotEdit','barBot');
+  // Logo
   const hl=!!bk.logo;
   document.getElementById('logoEmpty').style.display=hl?'none':'';
   document.getElementById('logoFull').style.display=hl?'block':'none';
@@ -702,6 +811,7 @@ function renderBrandPanel(){
   document.querySelectorAll('[data-lp]').forEach(el=>el.classList.toggle('on',el.dataset.lp===bk.lpos));
   document.getElementById('slLogo').value=bk.lsz||20;
   document.getElementById('slLogoV').textContent=(bk.lsz||20)+'%';
+  // Themes
   document.getElementById('themeGrid').innerHTML=S.themes.map(t=>
     `<div class="topt" onclick="applyTheme('${t.id}')"><div class="tprev">${t.c.map(col=>`<div style="background:${col}"></div>`).join('')}</div><div class="tname">${t.n}</div></div>`
   ).join('');
@@ -722,14 +832,30 @@ function renderAll(){
 // STATE MUTATIONS
 // ===================================================
 function selCard(i){S.sel=i;renderAll();}
+function setTemplate(tplIdx){
+  pushU('Ubah template');
+  S.cards[S.sel].template=parseInt(tplIdx);
+  renderAll();
+  toast('✓ Template diubah ke: '+CNAMES[parseInt(tplIdx)]);
+}
 function uf(k,v){pushU('Edit '+k);S.cards[S.sel].d[k]=v.replace(/\n/g,'<br>');renderGrid();}
 function setFont(v){pushU('Font');S.cards[S.sel].font=v;applyVars(S.sel);renderDesignPanel();}
+function setFontIdx(i){setFont(FONTS[i].v);}
 function applyFS(v){S.cards[S.sel].fs=parseInt(v);document.getElementById('fsVal').textContent=v+'%';applyVars(S.sel);}
+function applyLH(v){S.cards[S.sel].lh=parseFloat(v);document.getElementById('lhVal').textContent=parseFloat(v).toFixed(2);applyVars(S.sel);}
+function applyEG(v){S.cards[S.sel].gap=parseInt(v);document.getElementById('egVal').textContent=v+'px';applyVars(S.sel);}
+function setLH(v){S.cards[S.sel].lh=parseFloat(v);document.getElementById('lhVal').textContent=parseFloat(v).toFixed(2);applyVars(S.sel);}
+function setEG(v){S.cards[S.sel].eg=parseInt(v);document.getElementById('egVal').textContent=v+'px';applyVars(S.sel);}
 function setHL(v){pushU('Warna Headline');S.cards[S.sel].hl=v;applyVars(S.sel);renderDesignPanel();}
 function setAC(v){pushU('Warna Aksen');S.cards[S.sel].ac=v;applyVars(S.sel);renderDesignPanel();}
 function setSU(v){pushU('Warna Subtitle');S.cards[S.sel].su=v;applyVars(S.sel);renderDesignPanel();}
 function setBG(v){pushU('Background');S.cards[S.sel].bg=v;applyVars(S.sel);renderDesignPanel();}
-function setPos(v){pushU('Posisi');S.cards[S.sel].pos=v;renderGrid();renderDesignPanel();}
+function setPos9(code){
+  pushU('Posisi');
+  S.cards[S.sel].pos=code;
+  applyVars(S.sel);
+  renderDesignPanel();
+}
 function applyFX(){
   S.cards[S.sel].outline=document.getElementById('tOut').checked;
   S.cards[S.sel].shadow=document.getElementById('tSha').checked;
@@ -779,7 +905,15 @@ function dropImgTo(e,idx){
 // ===================================================
 // BRAND KIT
 // ===================================================
-function updBK(){S.bk.name=document.getElementById('bkName').value;S.bk.tag=document.getElementById('bkTag').value;renderGrid();}
+function updBK(){
+  const newName=document.getElementById('bkName').value;
+  const newTag=document.getElementById('bkTag').value;
+  const oldTag=S.bk.tag;
+  // Auto-sync to all cards that still use old tagline
+  S.cards.forEach(c=>{if(!c.d.brand||c.d.brand===oldTag)c.d.brand=newTag;});
+  S.bk.name=newName;S.bk.tag=newTag;
+  renderGrid();renderEditForm();
+}
 function applyBKAll(){S.cards.forEach(c=>{c.d.brand=S.bk.tag;});renderGrid();renderEditForm();toast('✓ Brand Kit diterapkan ke semua card!');}
 function setLP(v){S.bk.lpos=v;document.querySelectorAll('[data-lp]').forEach(el=>el.classList.toggle('on',el.dataset.lp===v));renderGrid();}
 function applyLS(v){S.bk.lsz=parseInt(v);document.getElementById('slLogoV').textContent=v+'%';renderGrid();}
@@ -788,8 +922,13 @@ function applyLS(v){S.bk.lsz=parseInt(v);document.getElementById('slLogoV').text
 // ===================================================
 function applyTheme(id){
   const t=S.themes.find(x=>x.id===id);if(!t)return;
-  S.cards[S.sel].bg=t.c[0];S.cards[S.sel].hl=t.c[1];S.cards[S.sel].ac=t.c[2];
-  applyVars(S.sel);renderDesignPanel();toast('Theme "'+t.n+'" diterapkan ke card '+(S.sel+1));
+  pushU('Apply theme '+t.n);
+  S.cards[S.sel].bg=t.c[0];
+  S.cards[S.sel].hl=t.c[1];
+  S.cards[S.sel].ac=t.c[2];
+  applyVars(S.sel);
+  renderDesignPanel();
+  toast('✓ Theme "'+t.n+'" diterapkan ke card '+(S.sel+1));
 }
 function saveTheme(){
   const n=prompt('Nama theme baru:');if(!n)return;
@@ -801,21 +940,25 @@ function saveTheme(){
 // A/B VARIANT
 // ===================================================
 function openAB(){
-  const i=S.sel;document.getElementById('abNum').textContent=i+1;
+  const i=S.sel;
+  document.getElementById('abNum').textContent=i+1;
   if(!S.cards[i].varB)S.cards[i].varB=JSON.parse(JSON.stringify(S.cards[i]));
-  // Show A
-  const tmpSel=S.sel;const cardA=document.createElement('div');cardA.innerHTML=renderCard(i);cardA.firstChild.style.cursor='default';cardA.firstChild.style.outline='';cardA.firstChild.removeAttribute('onclick');
-  // Show B - swap temporarily
-  const origCard=S.cards[i];S.cards[i]=origCard.varB;S.sel=-1;
-  const cardB=document.createElement('div');cardB.innerHTML=renderCard(i);cardB.firstChild.style.cursor='default';
+  const origCard=S.cards[i];
+  // Render A
+  const wrapA=document.createElement('div');wrapA.innerHTML=renderCard(i);
+  const elA=wrapA.firstChild;elA.id='cA'+i;elA.style.cursor='default';elA.removeAttribute('onclick');
+  applyVarsToEl(elA,origCard,i);
+  // Render B (swap temporarily)
+  S.cards[i]=origCard.varB;
+  const wrapB=document.createElement('div');wrapB.innerHTML=renderCard(i);
+  const elB=wrapB.firstChild;elB.id='cB'+i;elB.style.cursor='default';elB.removeAttribute('onclick');
+  applyVarsToEl(elB,origCard.varB,i);
   // Restore
-  S.cards[i]=origCard;S.sel=tmpSel;
+  S.cards[i]=origCard;
   const wrap=document.getElementById('abWrap');
-  wrap.innerHTML=`<div><div style="font-size:10px;font-weight:700;color:var(--gd);margin-bottom:5px">Variant A ${origCard.useB?'':'✓ Aktif'}</div></div><div><div style="font-size:10px;font-weight:700;color:var(--ac);margin-bottom:5px">Variant B ${origCard.useB?'✓ Aktif':''}</div></div>`;
-  wrap.children[0].appendChild(cardA.firstChild);
-  wrap.children[1].appendChild(cardB.firstChild);
-  // Apply vars
-  for(let j=0;j<2;j++)applyVars(i);
+  wrap.innerHTML=`<div style="text-align:center"><div style="font-size:10px;font-weight:700;color:var(--gd);margin-bottom:5px">Variant A ${!origCard.useB?'✓ Aktif':''}</div></div><div style="text-align:center"><div style="font-size:10px;font-weight:700;color:var(--ac);margin-bottom:5px">Variant B ${origCard.useB?'✓ Aktif':''}</div></div>`;
+  wrap.children[0].appendChild(elA);
+  wrap.children[1].appendChild(elB);
 }
 function useVariant(v){
   S.cards[S.sel].useB=(v==='b');
@@ -1000,14 +1143,7 @@ function fsPreview(){
   const sz=Math.min(window.innerHeight*.85,window.innerWidth*.85);
   cl.style.cssText=`width:${sz}px;height:${sz}px;cursor:default;outline:none;`;
   cl.removeAttribute('onclick');
-  // Re-apply CSS vars
-  const c=S.cards[S.sel];
-  cl.style.setProperty('--cbg',c.bg||CBG[S.sel]);
-  cl.style.setProperty('--cf',c.font||FONTS[0].v);
-  cl.style.setProperty('--cfs',(c.fs||100)/100);
-  cl.style.setProperty('--hl',c.hl||CTX[S.sel]);
-  cl.style.setProperty('--ac-c',c.ac||CAC[S.sel]);
-  cl.style.setProperty('--su',c.su||CSU[S.sel]);
+  applyVarsToEl(cl,S.cards[S.sel],S.sel);
   document.getElementById('fsWrap').innerHTML='';
   document.getElementById('fsWrap').appendChild(cl);
   openM('mFS');
@@ -1019,13 +1155,7 @@ function renderResp(){
     const cl=el.cloneNode(true);
     cl.style.cssText=`width:${sz}px;height:${sz}px;cursor:default;outline:none;`;
     cl.removeAttribute('onclick');
-    const c=S.cards[S.sel];
-    cl.style.setProperty('--cbg',c.bg||CBG[S.sel]);
-    cl.style.setProperty('--cf',c.font||FONTS[0].v);
-    cl.style.setProperty('--cfs',(c.fs||100)/100);
-    cl.style.setProperty('--hl',c.hl||CTX[S.sel]);
-    cl.style.setProperty('--ac-c',c.ac||CAC[S.sel]);
-    cl.style.setProperty('--su',c.su||CSU[S.sel]);
+    applyVarsToEl(cl,S.cards[S.sel],S.sel);
     const wrap=document.getElementById(id);wrap.innerHTML='';wrap.appendChild(cl);
   });
 }
