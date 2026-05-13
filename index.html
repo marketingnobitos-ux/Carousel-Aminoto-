@@ -159,36 +159,36 @@ input:checked+.tgl-s:before{transform:translateX(13px);}
 .gp-logo{font-family:'Abril Fatface',serif;font-size:14px;color:#f0e5c0;}
 .grow{display:grid;grid-template-columns:repeat(3,1fr);}
 /* ===== CARD BASE ===== */
-.card{width:185px;height:185px;position:relative;overflow:hidden;cursor:pointer;flex-shrink:0;background:var(--cbg,#3d5a1e);}
+.card{width:185px;height:185px;position:relative;overflow:hidden;cursor:pointer;flex-shrink:0;background:var(--cbg,#3d5a1e);container-type:inline-size;}
 .card.sel{outline:2.5px solid #d4c87a;outline-offset:-2.5px;z-index:10;}
 .card .bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
 .card .bg-ov{position:absolute;inset:0;z-index:2;}
-.catbar{position:absolute;top:7px;left:0;right:0;display:flex;justify-content:space-around;z-index:10;padding:0 8px;}
-.catbar span{font-family:'Cormorant Garamond',serif;font-size:6px;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--su,#9ab84a);opacity:.75;}
-.botbar{position:absolute;bottom:5px;left:0;right:0;display:flex;justify-content:space-around;z-index:10;padding:0 8px;}
-.botbar span{font-family:'Cormorant Garamond',serif;font-size:6px;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--su,#9ab84a);opacity:.75;}
-.ci{position:absolute;inset:0;padding:16px 12px 14px;display:flex;flex-direction:column;z-index:5;justify-content:var(--pos-jc,flex-end);align-items:var(--pos-ai,flex-start);text-align:var(--pos-ta,left);}
+.catbar{position:absolute;top:3.8cqw;left:0;right:0;display:flex;justify-content:space-around;z-index:10;padding:0 4.3cqw;}
+.catbar span{font-family:'Cormorant Garamond',serif;font-size:3.2cqw;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--su,#9ab84a);opacity:.75;}
+.botbar{position:absolute;bottom:2.7cqw;left:0;right:0;display:flex;justify-content:space-around;z-index:10;padding:0 4.3cqw;}
+.botbar span{font-family:'Cormorant Garamond',serif;font-size:3.2cqw;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--su,#9ab84a);opacity:.75;}
+.ci{position:absolute;inset:0;padding:8.6cqw 6.5cqw 7.5cqw;display:flex;flex-direction:column;z-index:5;justify-content:var(--pos-jc,flex-end);align-items:var(--pos-ai,flex-start);text-align:var(--pos-ta,left);}
 /* Card text elements - use CSS vars */
-.t1{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*24px);color:var(--hl,#f0e5c0);line-height:var(--clh,.85);letter-spacing:-1px;}
-.t2{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*24px);color:var(--ac-c,#d4c87a);line-height:var(--clh,.85);margin-top:var(--ceg,2px);}
-.t3{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*20px);color:var(--hl,#f0e5c0);line-height:var(--clh,.85);margin-top:var(--ceg,2px);}
-.eyebrow{font-family:'Cormorant Garamond',serif;font-size:6.5px;color:var(--su,#c8d88a);letter-spacing:2px;text-transform:uppercase;font-style:italic;margin-bottom:2px;opacity:.85;}
-.sub{font-family:'Cormorant Garamond',serif;font-size:7px;color:var(--su,#9ab84a);line-height:1.4;font-style:italic;margin-top:var(--ceg,5px);opacity:.9;}
-.tag{font-family:'Cormorant Garamond',serif;font-size:6.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;color:var(--su,#a8be6a);opacity:.75;}
-.badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:7px;padding:2px 7px;border-radius:20px;margin-top:var(--ceg,6px);font-weight:600;background:var(--hl,#f0e5c0);color:var(--cbg,#3d5a1e);}
-.pill{border:1px solid var(--ac-c,#c8d88a);color:var(--ac-c,#c8d88a);font-family:'Cormorant Garamond',serif;font-size:6.5px;padding:1.5px 6px;border-radius:20px;display:inline-block;margin-bottom:3px;}
+.t1{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*13cqw);color:var(--hl,#f0e5c0);line-height:var(--clh,.85);letter-spacing:-1px;}
+.t2{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*13cqw);color:var(--ac-c,#d4c87a);line-height:var(--clh,.85);margin-top:var(--ceg,2px);}
+.t3{font-family:var(--cf,'Abril Fatface',serif);font-size:calc(var(--cfs,1)*11cqw);color:var(--hl,#f0e5c0);line-height:var(--clh,.85);margin-top:var(--ceg,2px);}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-size:3.5cqw;color:var(--su,#c8d88a);letter-spacing:2px;text-transform:uppercase;font-style:italic;margin-bottom:2px;opacity:.85;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:3.8cqw;color:var(--su,#9ab84a);line-height:1.4;font-style:italic;margin-top:var(--ceg,5px);opacity:.9;}
+.tag{font-family:'Cormorant Garamond',serif;font-size:3.5cqw;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;color:var(--su,#a8be6a);opacity:.75;}
+.badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:calc(var(--bfs,1)*3.8cqw);padding:calc(var(--bpad,1)*1.1cqw) calc(var(--bpad,1)*3.8cqw);border-radius:20px;margin-top:var(--ceg,6px);font-weight:600;background:var(--hl,#f0e5c0);color:var(--cbg,#3d5a1e);}
+.pill{border:1px solid var(--ac-c,#c8d88a);color:var(--ac-c,#c8d88a);font-family:'Cormorant Garamond',serif;font-size:3.5cqw;padding:.8cqw 3.2cqw;border-radius:20px;display:inline-block;margin-bottom:3px;}
 .addr-box{background:rgba(0,0,0,.15);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:4px 5px;margin-top:var(--ceg,5px);}
-.addr{font-family:'Cormorant Garamond',serif;font-size:6.5px;color:var(--su,#c8d88a);line-height:1.5;}
-.hours{font-family:'Cormorant Garamond',serif;font-size:6px;color:var(--ac-c,#d4c87a);font-style:italic;margin-top:2px;}
-.addr-tag{font-family:'Cormorant Garamond',serif;font-size:6.5px;padding:3px 5px;display:block;margin-top:var(--ceg,5px);border-radius:2px;line-height:1.5;background:rgba(0,0,0,.3);color:var(--ac-c,#d4c87a);}
-.desc{font-family:'Cormorant Garamond',serif;font-size:7px;line-height:1.5;margin-top:var(--ceg,5px);color:var(--su,#8aaa5a);opacity:.9;}
-.tagline{font-family:'Cormorant Garamond',serif;font-size:7px;padding:2px 7px;border-radius:3px;margin-top:var(--ceg,6px);display:inline-block;font-weight:600;background:var(--hl,#f0e5c0);color:var(--cbg,#2a3018);}
-.deco-n{position:absolute;right:-4px;top:0;font-family:'Abril Fatface',serif;font-size:70px;opacity:.1;line-height:1;z-index:2;color:var(--hl,#fff);}
-.deco-l{position:absolute;bottom:-10px;right:-4px;font-family:'Abril Fatface',serif;font-size:80px;opacity:.12;line-height:1;z-index:2;color:var(--hl,#fff);}
-.uline{font-family:'DM Serif Display',serif;font-style:italic;font-size:8px;text-decoration:underline;text-underline-offset:2px;margin-top:var(--ceg,3px);color:var(--su,#7a8c3a);}
+.addr{font-family:'Cormorant Garamond',serif;font-size:3.5cqw;color:var(--su,#c8d88a);line-height:1.5;}
+.hours{font-family:'Cormorant Garamond',serif;font-size:3.2cqw;color:var(--ac-c,#d4c87a);font-style:italic;margin-top:2px;}
+.addr-tag{font-family:'Cormorant Garamond',serif;font-size:3.5cqw;padding:1.6cqw 2.7cqw;display:block;margin-top:var(--ceg,5px);border-radius:2px;line-height:1.5;background:rgba(0,0,0,.3);color:var(--ac-c,#d4c87a);}
+.desc{font-family:'Cormorant Garamond',serif;font-size:3.8cqw;line-height:1.5;margin-top:var(--ceg,5px);color:var(--su,#8aaa5a);opacity:.9;}
+.tagline{font-family:'Cormorant Garamond',serif;font-size:3.8cqw;padding:1cqw 3.8cqw;border-radius:3px;margin-top:calc(var(--ceg,5px)/2);display:inline-block;font-weight:600;background:var(--hl,#f0e5c0);color:var(--cbg,#2a3018);}
+.deco-n{position:absolute;right:-2cqw;top:0;font-family:'Abril Fatface',serif;font-size:38cqw;opacity:.1;line-height:1;z-index:2;color:var(--hl,#fff);}
+.deco-l{position:absolute;bottom:-5cqw;right:-2cqw;font-family:'Abril Fatface',serif;font-size:43cqw;opacity:.12;line-height:1;z-index:2;color:var(--hl,#fff);}
+.uline{font-family:'DM Serif Display',serif;font-style:italic;font-size:4.3cqw;text-decoration:underline;text-underline-offset:2px;margin-top:var(--ceg,3px);color:var(--su,#7a8c3a);}
 .bot-box{border-radius:3px;padding:4px 6px;margin-top:var(--ceg,4px);background:rgba(0,0,0,.35);}
-.hl{font-family:'Cormorant Garamond',serif;font-size:6px;font-style:italic;margin-top:2px;color:var(--su,#a8be6a);}
-.star{position:absolute;top:7px;right:9px;font-size:13px;opacity:.6;z-index:6;color:var(--hl,#fff);}
+.hl{font-family:'Cormorant Garamond',serif;font-size:3.2cqw;font-style:italic;margin-top:2px;color:var(--su,#a8be6a);}
+.star{position:absolute;top:3.8cqw;right:4.8cqw;font-size:7cqw;opacity:.6;z-index:6;color:var(--hl,#fff);}
 .logo-overlay{position:absolute;z-index:15;object-fit:contain;opacity:.9;}
 .ord-badge{position:absolute;top:5px;right:5px;background:var(--gd);color:#111;font-size:8px;font-weight:800;border-radius:3px;padding:1px 4px;z-index:20;display:none;}
 .show-ord .ord-badge{display:block;}
@@ -282,10 +282,24 @@ input[type=file]{display:none;}
       <div class="srow"><input type="range" min="0.5" max="2.5" step="0.05" value="0.85" id="lhSlider" oninput="applyLH(this.value)"><span class="sv" id="lhVal">0.85</span></div>
       <div class="sec" style="margin-top:10px">JARAK ANTAR ELEMEN</div>
       <div class="srow"><input type="range" min="0" max="40" value="5" id="egSlider" oninput="applyEG(this.value)"><span class="sv" id="egVal">5px</span></div>
+      <div class="sec" style="margin-top:10px">UKURAN BADGE (WARGA AMINOTO)</div>
+      <div class="fg"><label class="fl">Ukuran Teks Badge</label>
+        <div class="srow"><input type="range" min="0.5" max="4" step="0.05" value="1" id="bfsSlider" oninput="applyBFS(this.value)"><span class="sv" id="bfsVal">100%</span></div>
+      </div>
+      <div class="fg"><label class="fl">Ukuran Background Badge</label>
+        <div class="srow"><input type="range" min="0.5" max="5" step="0.05" value="1" id="bpadSlider" oninput="applyBPAD(this.value)"><span class="sv" id="bpadVal">100%</span></div>
+      </div>
       <div class="sec" style="margin-top:10px">POSISI KONTEN</div>
       <div style="display:flex;gap:10px;align-items:flex-start">
         <div class="pgrid" id="posGrid"></div>
         <div style="font-size:9px;color:var(--tx3);line-height:1.5;margin-top:2px">Atas / Tengah<br>/ Bawah</div>
+      </div>
+      <div class="sec" style="margin-top:10px">UKURAN BADGE (Warga Aminoto, dll)</div>
+      <div class="fg"><label class="fl">Ukuran Teks Badge</label>
+        <div class="srow"><input type="range" min="0.5" max="3" step="0.05" value="1" id="bfsSlider" oninput="applyBFS(this.value)"><span class="sv" id="bfsVal">100%</span></div>
+      </div>
+      <div class="fg"><label class="fl">Ukuran Padding Badge (lebar pill)</label>
+        <div class="srow"><input type="range" min="0.5" max="4" step="0.05" value="1" id="bpadSlider" oninput="applyBPAD(this.value)"><span class="sv" id="bpadVal">100%</span></div>
       </div>
       <div class="sec" style="margin-top:10px">EFEK TEKS</div>
       <div class="trow"><span style="font-size:10px;color:var(--tx2)">Outline Teks</span><label class="tgl"><input type="checkbox" id="tOut" onchange="applyFX()"><span class="tgl-s"></span></label></div>
@@ -314,7 +328,12 @@ input[type=file]{display:none;}
       <div style="display:flex;gap:5px;margin-top:4px">
         <button class="btn" onclick="applyBKAll()" style="flex:1;font-size:10px">↻ Apply Tagline ke Semua Card</button>
       </div>
-      <div class="sec" style="margin-top:12px">BRAND BAR ATAS</div>
+      <div class="trow" style="margin-top:8px">
+        <span style="font-size:10px;color:var(--tx2)">Tampilkan teks repeat di tiap card</span>
+        <label class="tgl"><input type="checkbox" id="tShowRep" onchange="toggleShowRepeats()"><span class="tgl-s"></span></label>
+      </div>
+      
+      <div class="sec" style="margin-top:12px">BRAND BAR ATAS (di luar grid)</div>
       <div id="barTopEdit"></div>
       <div class="sec" style="margin-top:12px">BRAND BAR BAWAH</div>
       <div id="barBotEdit"></div>
@@ -324,8 +343,14 @@ input[type=file]{display:none;}
         <div id="logoFull" style="display:none"><img class="iz-thumb" id="logoThumb"><div class="iz-btns"><button class="iz-btn" onclick="event.stopPropagation();trigUpload('logo')">↑ Ganti</button><button class="iz-btn del" onclick="event.stopPropagation();clearLogo()">✕ Hapus</button></div></div>
       </div>
       <div class="fg" style="margin-top:8px"><label class="fl">Posisi Logo</label>
-        <div class="bgrp"><button class="bgb" data-lp="tl" onclick="setLP('tl')">↖ Kiri Atas</button><button class="bgb" data-lp="tr" onclick="setLP('tr')">↗ Kanan Atas</button></div>
-        <div class="bgrp" style="margin-top:4px"><button class="bgb" data-lp="bl" onclick="setLP('bl')">↙ Kiri Bawah</button><button class="bgb on" data-lp="br" onclick="setLP('br')">↘ Kanan Bawah</button></div>
+        <div class="bgrp"><button class="bgb" data-lp="tl" onclick="setLP('tl')">↖ TL</button><button class="bgb" data-lp="tr" onclick="setLP('tr')">↗ TR</button><button class="bgb" data-lp="bl" onclick="setLP('bl')">↙ BL</button><button class="bgb on" data-lp="br" onclick="setLP('br')">↘ BR</button></div>
+        <button class="bgb" data-lp="custom" onclick="setLP('custom')" style="width:100%;margin-top:4px">✋ Custom (geser bebas)</button>
+        <div id="logoCustomPos" style="display:none;margin-top:6px">
+          <label class="fl">Posisi X (kiri ↔ kanan)</label>
+          <div class="srow"><input type="range" min="0" max="100" value="50" id="slLogoX" oninput="applyLogoPos()"><span class="sv" id="slLogoXV">50%</span></div>
+          <label class="fl">Posisi Y (atas ↔ bawah)</label>
+          <div class="srow"><input type="range" min="0" max="100" value="50" id="slLogoY" oninput="applyLogoPos()"><span class="sv" id="slLogoYV">50%</span></div>
+        </div>
       </div>
       <div class="fg"><label class="fl">Ukuran Logo</label><div class="srow"><input type="range" min="8" max="45" value="20" id="slLogo" oninput="applyLS(this.value)"><span class="sv" id="slLogoV">20%</span></div></div>
       <div class="sec" style="margin-top:10px">THEME PRESET</div>
@@ -477,7 +502,8 @@ function mkCard(i){
   return{
     d:defs[i]||{brand:'Pecel Lele',t1:'Card '+(i+1),t2:''},
     img:null,ov:0.72,fx:50,fy:50,filt:'none',
-    font:FONTS[0].v,fs:100,lh:0.85,eg:5,
+    font:FONTS[0].v,fs:100,lh:0.85,eg:5,bfs:1,bpad:1,
+    bfs:1,bpad:1,
     hl:'',ac:'',su:'',bg:'',
     pos:'bc',
     outline:false,shadow:false,
@@ -496,7 +522,7 @@ let S={
   ord:false,client:false,theme:'dark',lang:'id',
   zoom:80,
   eFmt:'png',eRes:1080,
-  bk:{name:'Aminoto',tag:'Pecel Lele',logo:null,lpos:'br',lsz:20,
+  bk:{name:'Aminoto',tag:'Pecel Lele',logo:null,lpos:'br',lsz:20,lposX:50,lposY:50,showRepeats:false,
     barTop:[{icon:'fa-instagram',text:'@aminoto.cirebon'},{icon:'',text:'aminoto.'},{icon:'fa-tiktok',text:'@aminoto'}],
     barBot:[{icon:'fa-whatsapp',text:'0812-3456-7890'},{icon:'',text:'Sambal Dadak'},{icon:'fa-location-dot',text:'Cirebon'}]
   },
@@ -550,6 +576,8 @@ function applyVarsToEl(el,c,idx){
   // Line-height & element gap
   el.style.setProperty('--clh', c.lh!==undefined?c.lh:0.85);
   el.style.setProperty('--ceg', (c.eg!==undefined?c.eg:5)+'px');
+  el.style.setProperty('--bfs', c.bfs!==undefined?c.bfs:1);
+  el.style.setProperty('--bpad', c.bpad!==undefined?c.bpad:1);
   // Text FX
   el.querySelectorAll('.t1,.t2,.t3').forEach(t=>{
     t.style.webkitTextStroke=c.outline?'1px rgba(0,0,0,.55)':'';
@@ -572,11 +600,21 @@ function bgHtml(c,i){
   return`<img class="bg-img" src="${c.img}" style="filter:${filt.css};object-position:${c.fx||50}% ${c.fy||50}%"><div class="bg-ov" style="background:rgba(${COVLAY[i]},${c.ov||.72})"></div>`;
 }
 function logoHtml(c){
-  const src=c.logo||S.bk.logo;if(!src)return'';
+  const cLogo=c.logo;
+  const src=cLogo||S.bk.logo;
+  if(!src)return'';
   const pos=S.bk.lpos||'br';
   const sz=S.bk.lsz||20;
-  const pm={tl:'top:8px;left:8px',tr:'top:8px;right:8px',bl:'bottom:18px;left:8px',br:'bottom:18px;right:8px'};
-  return`<img class="logo-overlay" src="${src}" style="${pm[pos]};width:${sz}%">`;
+  let posStyle;
+  if(pos==='custom'){
+    const x=S.bk.lposX!==undefined?S.bk.lposX:50;
+    const y=S.bk.lposY!==undefined?S.bk.lposY:50;
+    posStyle=`left:${x}%;top:${y}%;transform:translate(-50%,-50%);`;
+  } else {
+    const pm={tl:'top:6%;left:6%',tr:'top:6%;right:6%',bl:'bottom:10%;left:6%',br:'bottom:10%;right:6%'};
+    posStyle=pm[pos]||pm.br;
+  }
+  return`<img class="logo-overlay" src="${src}" style="${posStyle};width:${sz}%">`;
 }
 function ordBadge(i){
   const ord=S.total===9?[9,8,7,6,5,4,3,2,1]:[6,5,4,3,2,1];
@@ -604,10 +642,10 @@ function renderCard(idx){
   const br=c.d.brand||'Pecel Lele';
   return`<div class="card${isSel}" id="c${idx}" onclick="selCard(${idx})" ondragover="event.preventDefault();this.style.outline='2px dashed var(--gd)'" ondragleave="this.style.outline=''" ondrop="dropImgTo(event,${idx})">
     ${bgHtml(c,idx)}${logoHtml(c)}${ordBadge(idx)}
-    <div class="catbar"><span>${br}</span><span>${br}</span><span>${br}</span></div>
+    ${S.bk.showRepeats?`<div class="catbar"><span>${br}</span><span>${br}</span><span>${br}</span></div>`:''}
     <div class="ci">${cardInner(idx)}</div>
     ${c.useB?`<div style="position:absolute;top:3px;right:3px;background:rgba(0,0,0,.5);color:var(--gd);font-size:7px;border-radius:2px;padding:0 3px;z-index:20">B</div>`:''}
-    <div class="botbar"><span>${br}</span><span>${br}</span><span>${br}</span></div>
+    ${S.bk.showRepeats?`<div class="botbar"><span>${br}</span><span>${br}</span><span>${br}</span></div>`:''}
   </div>`;
 }
 // ===================================================
@@ -701,6 +739,18 @@ function renderDesignPanel(){
   // Element gap
   document.getElementById('egSlider').value=c.eg||5;
   document.getElementById('egVal').textContent=(c.eg||5)+'px';
+  // Badge sliders
+  const _bfs=c.bfs!==undefined?c.bfs:1;
+  const _bpad=c.bpad!==undefined?c.bpad:1;
+  document.getElementById('bfsSlider').value=_bfs;
+  document.getElementById('bfsVal').textContent=Math.round(_bfs*100)+'%';
+  document.getElementById('bpadSlider').value=_bpad;
+  document.getElementById('bpadVal').textContent=Math.round(_bpad*100)+'%';
+  // Badge sliders sync
+  const bfsS=document.getElementById('bfsSlider');
+  if(bfsS){bfsS.value=c.bfs||1;document.getElementById('bfsVal').textContent=Math.round((c.bfs||1)*100)+'%';}
+  const bpadS=document.getElementById('bpadSlider');
+  if(bpadS){bpadS.value=c.bpad||1;document.getElementById('bpadVal').textContent=Math.round((c.bpad||1)*100)+'%';}
   // Color pickers
   const mkPal=(id,cur,fn)=>{
     document.getElementById(id).innerHTML=PALETTES.map(col=>
@@ -796,19 +846,36 @@ function updBar(barKey,segIdx,field,value){
   S.bk[barKey][segIdx][field]=value;
   renderGrid();
 }
+
 function renderBrandPanel(){
   const bk=S.bk;
   document.getElementById('bkName').value=bk.name;
   document.getElementById('bkTag').value=bk.tag;
+  
   // Brand bar editors
   renderBarEditor('barTopEdit','barTop');
   renderBarEditor('barBotEdit','barBot');
+  // showRepeats sync
+  const tsr=document.getElementById('tShowRep');
+  if(tsr)tsr.checked=!!bk.showRepeats;
   // Logo
   const hl=!!bk.logo;
   document.getElementById('logoEmpty').style.display=hl?'none':'';
   document.getElementById('logoFull').style.display=hl?'block':'none';
   if(hl)document.getElementById('logoThumb').src=bk.logo;
   document.querySelectorAll('[data-lp]').forEach(el=>el.classList.toggle('on',el.dataset.lp===bk.lpos));
+  const xy=document.getElementById('logoCustomPos');
+  if(xy)xy.style.display=bk.lpos==='custom'?'block':'none';
+  const slx=document.getElementById('slLogoX');if(slx)slx.value=bk.lposX!==undefined?bk.lposX:50;
+  const slxv=document.getElementById('slLogoXV');if(slxv)slxv.textContent=(bk.lposX!==undefined?bk.lposX:50)+'%';
+  const sly=document.getElementById('slLogoY');if(sly)sly.value=bk.lposY!==undefined?bk.lposY:50;
+  const slyv=document.getElementById('slLogoYV');if(slyv)slyv.textContent=(bk.lposY!==undefined?bk.lposY:50)+'%';
+  const cp=document.getElementById('logoCustomPos');
+  if(cp)cp.style.display=bk.lpos==='custom'?'block':'none';
+  const sX=document.getElementById('slLogoX');
+  if(sX){sX.value=bk.lposX!==undefined?bk.lposX:50;document.getElementById('slLogoXV').textContent=(bk.lposX!==undefined?bk.lposX:50)+'%';}
+  const sY=document.getElementById('slLogoY');
+  if(sY){sY.value=bk.lposY!==undefined?bk.lposY:50;document.getElementById('slLogoYV').textContent=(bk.lposY!==undefined?bk.lposY:50)+'%';}
   document.getElementById('slLogo').value=bk.lsz||20;
   document.getElementById('slLogoV').textContent=(bk.lsz||20)+'%';
   // Themes
@@ -843,6 +910,8 @@ function setFont(v){pushU('Font');S.cards[S.sel].font=v;applyVars(S.sel);renderD
 function setFontIdx(i){setFont(FONTS[i].v);}
 function applyFS(v){S.cards[S.sel].fs=parseInt(v);document.getElementById('fsVal').textContent=v+'%';applyVars(S.sel);}
 function applyLH(v){S.cards[S.sel].lh=parseFloat(v);document.getElementById('lhVal').textContent=parseFloat(v).toFixed(2);applyVars(S.sel);}
+function applyBFS(v){S.cards[S.sel].bfs=parseFloat(v);document.getElementById('bfsVal').textContent=Math.round(v*100)+'%';applyVars(S.sel);}
+function applyBPAD(v){S.cards[S.sel].bpad=parseFloat(v);document.getElementById('bpadVal').textContent=Math.round(v*100)+'%';applyVars(S.sel);}
 function applyEG(v){S.cards[S.sel].gap=parseInt(v);document.getElementById('egVal').textContent=v+'px';applyVars(S.sel);}
 function setLH(v){S.cards[S.sel].lh=parseFloat(v);document.getElementById('lhVal').textContent=parseFloat(v).toFixed(2);applyVars(S.sel);}
 function setEG(v){S.cards[S.sel].eg=parseInt(v);document.getElementById('egVal').textContent=v+'px';applyVars(S.sel);}
@@ -915,7 +984,28 @@ function updBK(){
   renderGrid();renderEditForm();
 }
 function applyBKAll(){S.cards.forEach(c=>{c.d.brand=S.bk.tag;});renderGrid();renderEditForm();toast('✓ Brand Kit diterapkan ke semua card!');}
-function setLP(v){S.bk.lpos=v;document.querySelectorAll('[data-lp]').forEach(el=>el.classList.toggle('on',el.dataset.lp===v));renderGrid();}
+function toggleShowRepeats(){
+  S.bk.showRepeats=document.getElementById('tShowRep').checked;
+  renderGrid();
+  toast(S.bk.showRepeats?'Teks repeat ditampilkan':'Teks repeat disembunyikan');
+}
+function setLP(v){
+  S.bk.lpos=v;
+  document.querySelectorAll('[data-lp]').forEach(el=>el.classList.toggle('on',el.dataset.lp===v));
+  const xy=document.getElementById('logoCustomPos');
+  if(xy)xy.style.display=v==='custom'?'block':'none';
+  renderGrid();
+}
+
+
+function applyLogoPos(){
+  const x=document.getElementById('slLogoX').value;
+  const y=document.getElementById('slLogoY').value;
+  S.bk.lposX=parseInt(x);S.bk.lposY=parseInt(y);
+  document.getElementById('slLogoXV').textContent=x+'%';
+  document.getElementById('slLogoYV').textContent=y+'%';
+  renderGrid();
+}
 function applyLS(v){S.bk.lsz=parseInt(v);document.getElementById('slLogoV').textContent=v+'%';renderGrid();}
 // ===================================================
 // THEMES
@@ -1054,6 +1144,8 @@ function setEF(type,val){
   else{S.eRes=val;document.querySelectorAll('[id^="eRes-"]').forEach(e=>e.classList.toggle('on',e.id==='eRes-'+val));}
 }
 async function doExport(mode){
+  // Wait fonts ready - prevents wrong sizing in export
+  if(document.fonts&&document.fonts.ready){await document.fonts.ready;}
   const scale=S.eRes/185;
   const mime=S.eFmt==='jpg'?'image/jpeg':'image/png';
   const ord=S.total===9?[9,8,7,6,5,4,3,2,1]:[6,5,4,3,2,1];
